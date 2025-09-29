@@ -141,6 +141,7 @@ int main(int argc, char* argv[]) {
         std::cout << "  MPI_Wtime(): " << latencia_mpi << " segundos" << std::endl;
 
         // Análisis de precisión
+        double tick = MPI_Wtick();
         std::cout << "\n=== ANÁLISIS DE PRECISIÓN ===" << std::endl;
         std::cout << "Resolución de MPI_Wtime() es " << (tick > 0 ? (1.0/tick) : 0) << " veces mejor que segundos" << std::endl;
 
